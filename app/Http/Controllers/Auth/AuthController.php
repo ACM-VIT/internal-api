@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -52,6 +53,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            
         ]);
     }
 
@@ -67,6 +69,18 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'position' => $data['position'],
+            'isBoard' => $data['isBoard'],
+            'contact' => $data['contact'],
+            'bio' => $data['bio'],
+            'regno' => $data['regno'],
+            'role' => $data['role'],
+            'profile_pic' => 'images/profile/default.png',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+
         ]);
     }
+
+    
 }

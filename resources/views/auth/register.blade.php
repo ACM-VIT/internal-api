@@ -66,6 +66,91 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('position') ? ' has-error' : '' }}">
+                            <label for="position" class="col-md-4 control-label">Position</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="position" value="{{ old('position') }}">
+
+                                @if ($errors->has('position'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('position') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('isBoard') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">isBoard</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="isBoard" value="{{ old('isBoard') }}">
+
+                                @if ($errors->has('isBoard'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('isBoard') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('contact') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Contact Number</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="contact" value="{{ old('name') }}">
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Bio</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="bio" value="{{ old('name') }}">
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">RegNo</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="regno" value="{{ old('name') }}">
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Role</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="role" value="{{ old('name') }}">
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
