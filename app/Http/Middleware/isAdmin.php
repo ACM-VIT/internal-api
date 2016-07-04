@@ -17,15 +17,21 @@ class isAdmin
     public function handle($request, Closure $next)
     {
         $user = Auth::user();
-        if($user->role==2)
+        if($user)
         {
+            if ($user->role == 1)
+            {
 
-            return $next($request);
+                return $next($request);
 
+            }
+
+            else
+
+            {
+                return redirect('/');
+            }
         }
-        else
-        {
-            return back();
-        }
+        else return redirect('/');
     }
 }

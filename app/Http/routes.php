@@ -37,3 +37,20 @@ Route::get('api/users/all', 'UserController@showAllUsersAPI');
  * @params => None*/
 
 Route::get('/users/all','UserController@showAllUsers');
+
+/*
+ * User management for Admin
+ *
+ * */
+
+Route::get('/admin/users/all','AdminController@showAllUsersWithAdminRights');
+
+/*
+ * Delete any user .
+ * Middleware => isAdmin
+ * @params => userID
+ * */
+
+Route::get('/user/delete/{userID}','AdminController@removeUser');
+
+
