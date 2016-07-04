@@ -24,3 +24,16 @@ Route::get('/','indexController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+/*
+ * Show All users controller API.
+ *
+ */
+Route::get('api/users/all', 'UserController@showAllUsersAPI');
+
+/*
+ * Show all users in a view.
+ * For Web.
+ * @params => None*/
+
+Route::get('/users/all','UserController@showAllUsers');
