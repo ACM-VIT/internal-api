@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+/*
+ *
+ * All the routes to be defined over here.
+ * Basic structure :
+ * @params, method*/
+
+Route::get('/','indexController@index');
+
