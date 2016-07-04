@@ -17,6 +17,13 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer('position');
+            $table->boolean('isBoard');
+            $table->string('contact');
+            $table->text('bio');
+            $table->string('regno')->unique();
+            $table->string('profile_pic');
+            $table->integer('role'); //Tech, Management, Tech enth, Design
             $table->rememberToken();
             $table->timestamps();
         });
