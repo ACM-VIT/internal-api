@@ -43,7 +43,7 @@
     </div>
 </div>
 <script>
-    $(document).on('click', function () {
+    $('.nav-tabs').on('click', function () {
         $('.collapse').collapse('hide');
     });
 </script>
