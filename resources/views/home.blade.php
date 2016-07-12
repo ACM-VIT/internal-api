@@ -42,4 +42,9 @@
         </div>
     </div>
 </div>
+<script>
+    $('.nav-tabs').on('click', function () {
+        $('.collapse').collapse('hide');
+    });
+</script>
 @endsection
