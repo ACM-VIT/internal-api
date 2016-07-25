@@ -53,4 +53,15 @@ Route::get('/admin/users/all','AdminController@showAllUsersWithAdminRights');
 
 Route::get('/user/delete/{userID}','AdminController@removeUser');
 
+/*
+ * Make Announcement Route
+ * */
+
+Route::post('/admin/announce', 'AdminController@makeAnnouncement');
+
+/*
+ * Call up meeting route
+ * */
+
+Route::post('/admin/meeting/new', 'AdminController@callMeeting');
 
